@@ -1,6 +1,6 @@
 import { tailwind } from "@theme-ui/presets"
 
-export default {
+const theme = {
   ...tailwind,
   fonts: {
     ...tailwind.fonts,
@@ -16,7 +16,7 @@ export default {
     background: "#fff",
     primary: "#3c6cab",
     secondary: "#748094",
-    heading: tailwind.colors.black,
+    heading: "#2f3747",
     muted: "#e3e8ef",
     highlight: "#bbd5fb"
   },
@@ -121,3 +121,5 @@ export default {
     },
   },
 }
+
+export default theme

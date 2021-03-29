@@ -1,11 +1,11 @@
 /** @jsx jsx */
 import { jsx, Heading } from "theme-ui"
-import { PageProps } from "gatsby"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
+// @ts-ignore
 import About from "../content/about"
 
-const AboutPage = (props :PageProps) => {
+const AboutPage = () => {
   return (
     <Layout>
       <SEO title="About" />

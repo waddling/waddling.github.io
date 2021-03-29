@@ -1,12 +1,10 @@
-/** @jsx jsx */
 import React from "react"
-import { Global } from "@emotion/core"
-import { Box, Container, jsx } from "theme-ui"
+import { Global } from "@emotion/react"
+import { Box, Container } from "theme-ui"
+import useSiteMetadata from "../hooks/use-site-metadata"
 import SEO from "./seo"
 import Header from "./header"
 import Footer from "./footer"
-import useSiteMetadata from "../hooks/use-site-metadata"
-import CodeStyles from "../styles/code"
 import "@fontsource/quicksand"
 import "@fontsource/lato"
 
@@ -18,7 +16,7 @@ const Layout = ({ children, className = `` }: LayoutProps) => {
   return (
     <React.Fragment>
       <Global
-        styles={(theme) => ({
+        styles={(theme: any) => ({
           "*": {
             boxSizing: `inherit`,
           },
@@ -48,7 +46,7 @@ const Layout = ({ children, className = `` }: LayoutProps) => {
       <SEO />
       <Container>
         <Header siteTitle={siteTitle || `Title`} />
-          <Box sx={{ ...CodeStyles }} className={className}>
+          <Box className={className}>
             <main>{children}</main>  
           </Box>
         <Footer />

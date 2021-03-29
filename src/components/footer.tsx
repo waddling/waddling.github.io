@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx, Link } from "theme-ui"
 import useSiteMetadata from "../hooks/use-site-metadata"
 
 const Footer = () => {
@@ -23,6 +23,15 @@ const Footer = () => {
     >
       <div>
         &copy; {new Date().getFullYear()} by {name}. All rights reserved.
+      </div>
+      <div>
+        Theme inspired by
+        {` `}
+        <Link aria-label="Link to the theme author's website" href="https://www.lekoarts.de/en">
+          LekoArts
+        </Link>
+        {``}
+        .
       </div>
     </footer>
   )
